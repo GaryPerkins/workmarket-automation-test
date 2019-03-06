@@ -26,22 +26,28 @@ var signUpCommands = {
 	},
 	clearAllFields: function() {
 		// hacky workaround due to clearValue being seemingly broken: https://github.com/nightwatchjs/nightwatch/issues/1939
-		this.click('@firstName');
-		this.api
-			.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-		this.click('@lastName');
-		this.api
-			.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-  	this.click('@email');
-		this.api
-			.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-		this.click('@password');
-		this.api
-			.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
+		var manyBackSpaces = ['\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008','\u0008'];
+		this.setValue('@firstName', manyBackSpaces);
+		this.setValue('@lastName', manyBackSpaces);
+		this.setValue('@email', manyBackSpaces);
+		this.setValue('@password', manyBackSpaces);
+	
+		// this.click('@firstName');
+		// this.api
+		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
+  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
+		// this.click('@lastName');
+		// this.api
+		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
+  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
+  // 	this.click('@email');
+		// this.api
+		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
+  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
+		// this.click('@password');
+		// this.api
+		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
+  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
 	}
 };
 
