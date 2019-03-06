@@ -39,10 +39,10 @@ module.exports = {
 		// with results list now in our hands, iterate through and check their innerText for our search term
 		search
 			.api.perform(function() {
-				for(var i = 0; i < results.length; i++) {
+				for(let i = 0; i < results.length; i++) {
 					this.elementIdAttribute(results[i].ELEMENT, 'innerText', function(res) {
 						// normalize data to check
-						var innerText = JSON.stringify(res).toLowerCase();
+						var innerText = JSON.stringify(res.value).toLowerCase();
 						// had to use chai assertion for this as nightwatch only supports comparing elements
 						// will not appear in nightwatch reporter if passing, only if failed w/ second arg as fail msg
 						expect(innerText).to.have.string(searchTerm, 'Profile card did not contain ' + searchTerm);
