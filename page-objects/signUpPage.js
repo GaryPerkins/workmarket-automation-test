@@ -31,23 +31,6 @@ var signUpCommands = {
 		this.setValue('@lastName', manyBackSpaces);
 		this.setValue('@email', manyBackSpaces);
 		this.setValue('@password', manyBackSpaces);
-	
-		// this.click('@firstName');
-		// this.api
-		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-		// this.click('@lastName');
-		// this.api
-		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-  // 	this.click('@email');
-		// this.api
-		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
-		// this.click('@password');
-		// this.api
-		// 	.keys([this.api.Keys.CONTROL, 'a', this.api.Keys.NULL])
-  // 		.keys([this.api.Keys.DELETE, this.api.Keys.NULL]);
 	}
 };
 
